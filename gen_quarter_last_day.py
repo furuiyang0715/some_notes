@@ -42,11 +42,11 @@ def gen_quarter_last_day(start_date: datetime.datetime, end_date: datetime.datet
     # 判断end_date位置
     if end_date >= e4:
         date_list.extend([e1, e2, e3, e4])
-    elif start_date >= e3:
+    elif end_date >= e3:
         date_list.extend([e1, e2, e3])
-    elif start_date >= e2:
+    elif end_date >= e2:
         date_list.extend([e1, e2])
-    elif start_date >= e1:
+    elif end_date >= e1:
         date_list.append(e1)
     else:
         pass  # 时间未到第一季度末 不做处理
